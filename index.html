@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <title>Canvas tutorial template</title>
+	<meta name="twitter:card" content="summary_large_image">
+	 <meta name="twitter:site" content="@joeishii" />
+	 <meta property="og:url" content="https://joe01.azurewebsites.net/canvas5.html" />
+	<meta property="og:title" content="物理エンジンで作ってみた" />
+	<meta property="og:description" content="昔から作ってみたかった物理エンジンを使ったゲーム。それっぽく出来たけど、思ってたんと違う。" />
+	<meta property="og:image" content="https://joe01.azurewebsites.net/sc.png" />	  
+<script src='//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
+<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css'/>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+	  <script src="matter.min.js"></script>
+    <script type="text/javascript">
+
+$(function(){
+
+	var w = $("body").width();
+	var h = $("body").height();
+	
+	var Engine = Matter.Engine,
+		Render = Matter.Render,
+      	Runner = Matter.Runner,
+      	World = Matter.World,
+      	Bodies = Matter.Bodies,
+		//Common = Matter.Common,
+		//Composite = Matter.Composite,
+		Composites = Matter.Composites,
+		Constraint = Matter.Constraint;
+		
+	var engine = Engine.create(),  //物理演算エンジンを生成？
+    	world = engine.world;  //重力の存在する仮想世界の生成…？
+	var render = Render.create({  //レンダリングの設定？
+        element: document.getElementById('main'),
+        engine: engine,
+        options: {
+        width: w,  //ステージの横幅
+        height: h,  //ステージの高さ
+        background: '#FFFFFF',  //ステージの背景色
+		wireframes: false  //ワイヤーフレームモードをオフ
+        }
+    });
+    Render.run(render);  //ステージを配置させる記述？
+    // create runner
+    var runner = Runner.create();
+	Runner.run(runner, engine);  //物理エンジンを実行？
+	
+	//var shikaku = Bodies.rectangle(500, 0, 100, 80);
+	var maru = Bodies.circle(-100, -100, 100);
+	var yuka = Bodies.rectangle(w/2, h+45, w, 30, {isStatic: true});
+	var ue = Bodies.rectangle(w/2, -45, w, 30, {isStatic: true});
+	var kb1 = Bodies.rectangle(-45, h/2, 30, h, {isStatic: true});
+	var kb2 = Bodies.rectangle(w+45, h/2, 30, h, {isStatic: true});
+//	var constraint = Constraint.create({
+//        	pointA: { x: 100, y: 200 },
+//        	bodyB: maru,
+//        	pointB: { x: 0, y: 0 },
+//        	stiffness: 0.005
+//    	});
+	
+	
+    World.add(world, [  //作成した図形をステージに追加して描画する？
+		//maru,
+		//constraint,
+		//shikaku,
+      	yuka,
+		ue,
+		kb1,
+		kb2
+	]);
+	
+	    // add bodies
+    var stack = Composites.stack(30, 30, h/30, w/30, 60, 60, function(x, y) {
+        return Bodies.circle(x, y, 30);
+    });
+    
+	
+    World.add(world, [
+        stack
+    ]);
+	
+	
+	engine.world.gravity.x = 0;
+	
+	
+	window.onload = function(){
+		setInterval(view_draw, 10);
+	}
+
+	
+	var mx = 0;  //X座標
+    var my = 0;  //Y座標
+	var anc_flg = 1;
+	
+    $('#mainCanvas').click(function(e){
+        //view_draw();
+
+//		if(anc_flg==1){
+//			World.remove(world, constraint);
+//			anc_flg=0;
+//		}else{
+//			World.remove(world, [maru, constraint]);
+//
+//	    	mx = e.pageX;  //X座標
+//    		my = e.pageY;  //Y座標
+//
+//			maru = Bodies.circle(maru.position.x, maru.position.y, 30);
+//			constraint = Constraint.create({
+//        		pointA: { x: mx, y: my },
+//        		bodyB: maru,
+//        		pointB: { x: 0, y: 0 },
+//				length:0,
+//        		stiffness: 0.005
+//    		});
+//    		World.add(world, [maru, constraint]);
+//			
+//			anc_flg=1;
+//		}
+   });
+	
+	
+	
+
+//	document.body.addEventListener("mousemove", function(e){
+//	    mx = e.pageX;  //X座標
+//    	my = e.pageY;  //Y座標
+//		
+//		maru.position.x = mx; 
+//		maru.position.y = my;
+// 	});
+
+	
+	function view_draw() {
+		
+		var r = Math.floor(Math.random()*4);
+		if(r==0){
+			engine.world.gravity.x = 0.1;
+		}else if(r==1){
+			engine.world.gravity.x = -0.1;
+		}else if(r==2){
+			engine.world.gravity.y = 0.1;
+		}else if(r==3){
+			engine.world.gravity.y = -0.1;
+		}
+		
+		
+	var canvas = document.getElementById('mainCanvas');//canvas要素のノードオブジェクト
+	canvas.width = w;//サイズを指定しなおさないとおかしくなる。
+	canvas.height = h;
+	if(!canvas || !canvas.getContext){return false;};//canvas要素の存在チェックとCanvas未対応ブラウザの対処
+	var ctx = canvas.getContext('2d');//2Dコンテキスト
+
+	var rr = 0;//Math.floor(Math.random()*255);
+	var rg = 100;//Math.floor(Math.random()*255);
+	var rb = 255;//Math.floor(Math.random()*255);
+	
+
+//	if(anc_flg==1){
+//	ctx.beginPath();//宣言
+//    ctx.lineWidth = 5; // 線の幅は5px	
+//	ctx.moveTo(mx,my);
+//	ctx.lineTo(maru.position.x, maru.position.y);
+//	ctx.strokeStyle='rgba('+ rr +',' + rg + ',' + rb + ',0.5)'; // 青
+//	ctx.stroke();
+//	}
+		
+	/* 円の描画 */
+//    ctx.beginPath(); // パスの初期化
+//    ctx.arc(maru.position.x, maru.position.y, 30, 0, 2 * Math.PI); // (100, 50)の位置に半径30pxの円
+//    ctx.closePath(); // パスを閉じる
+//	ctx.fillStyle='rgba('+ rr +',' + rg + ',' + rb + ',0.5)'; // 青
+//	ctx.fill(); // 軌跡の範囲を塗りつぶす		
+
+	for (var i = 0; i < stack.bodies.length; i += 1) {
+		
+		var rx = stack.bodies[20].position.x
+		var ry = stack.bodies[20].position.y
+		
+		var ox = stack.bodies[i].position.x
+		var oy = stack.bodies[i].position.y
+		
+		
+		if(i==20){
+			ctx.beginPath(); // パスの初期化
+    		ctx.arc(stack.bodies[i].position.x, stack.bodies[i].position.y, 30, 0, 2 * Math.PI); // (100, 50)の位置に半径30pxの円
+    		ctx.closePath(); // パスを閉じる
+			ctx.fillStyle='rgba(255,0,0,0.5)'; // 青
+			ctx.fill(); // 軌跡の範囲を塗りつぶす		
+		}else{
+			ctx.beginPath(); // パスの初期化
+    		ctx.arc(stack.bodies[i].position.x, stack.bodies[i].position.y, 30, 0, 2 * Math.PI); // (100, 50)の位置に半径30pxの円
+    		ctx.closePath(); // パスを閉じる
+			ctx.fillStyle='rgba('+ rr +',' + rg + ',' + rb + ',0.5)'; // 青
+			ctx.fill(); // 軌跡の範囲を塗りつぶす		
+		}
+		
+	}
+		
+	}
+	
+});
+		
+		
+</script>
+<style type="text/css">
+
+html {
+	width: 100%;
+    height: 100%;
+	margin: 0;
+}
+body {
+	width: 100%;
+    height: 100%;
+    margin: 0;
+}
+canvas {
+	background-color: rgba(255,255,255,1.0);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+    </style>
+  </head>
+  <body>
+	<div id="main"></div>
+	<canvas id="mainCanvas"></canvas>
+  </body>
+</html>
