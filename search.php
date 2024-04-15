@@ -24,8 +24,10 @@ function h($s){
 	return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
 }
 
-require_once("../src/pdo.php");//ファイルを読み込み
-require_once("../src/Request.php");//外部ファイルの読み込み
+//require_once("../src/pdo.php");//ファイルを読み込み
+//require_once("../src/Request.php");//外部ファイルの読み込み
+require_once("src/pdo.php");//ファイルを読み込み
+require_once("src/Request.php");//外部ファイルの読み込み
 
 
 $request=new Request();//postを得るためのクラス　　　　　　　　不要な気がする！！！！！！！！！！！！！
