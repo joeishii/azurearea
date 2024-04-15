@@ -30,7 +30,8 @@ date_default_timezone_set('Asia/Tokyo');//タイムゾーンの設定
 
 
 //require_once("../src/pdo.php");//ファイルを読み込み
-require_once("../src/Request.php");//外部ファイルの読み込み
+//require_once("../src/Request.php");//外部ファイルの読み込み
+require_once("src/Request.php");//外部ファイルの読み込み
 
 
 //foreach($_POST as $key => $val){echo $key.":".$val."<br>\n";}//postの値を確認

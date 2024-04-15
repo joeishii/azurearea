@@ -26,8 +26,11 @@ function h($s){
 	return htmlspecialchars($s, ENT_QUOTES, "UTF-8");
 }
 
-require_once("../src/pdo.php");//ファイルを読み込み
-require_once("../src/Request.php");//外部ファイルの読み込み
+//require_once("../src/pdo.php");//ファイルを読み込み
+//require_once("../src/Request.php");//外部ファイルの読み込み
+require_once("src/pdo.php");//ファイルを読み込み
+require_once("src/Request.php");//外部ファイルの読み込み
+
 
 //foreach($_POST as $key => $val){echo $key.":".$val."<br>\n";}//postの値を確認
 
