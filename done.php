@@ -85,6 +85,11 @@ $(document).ready(function() {
         $('#msg').html("通報が完了しました");
         $('#block_pas').hide();
 
+    <? }elseif($mode=="inquiry_ins"){ ?>
+
+        $('#msg').html("お問合せの送信が完了しました");
+        $('#block_pas').hide();
+
     <? }else{ ?>
 
     <? } ?>

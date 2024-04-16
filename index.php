@@ -37,6 +37,11 @@ $(document).ready(function() {
         window.location.href = "entry.php";
     });
 
+    
+    $('#menu_ls_inquiry').click(function(){
+        window.location.href = "inquiry.php";
+    });
+
     let d = new Date();
     let y = d.getFullYear();
     $("#copylight").html("Copylight " + y + " YAY ℠");
@@ -71,7 +76,7 @@ $(document).ready(function() {
                         <div class="col-sm-12">利用規約</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">問合せ</div>
+                        <div id="menu_ls_inquiry" class="col-sm-12">問合せ</div>
                     </div>
                 </div>
 
