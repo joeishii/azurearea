@@ -37,7 +37,10 @@ $(document).ready(function() {
         window.location.href = "entry.php";
     });
 
-    
+    $('#menu_ls_search').click(function(){
+        window.location.href = "search.php";
+    });
+
     $('#menu_ls_inquiry').click(function(){
         window.location.href = "inquiry.php";
     });
@@ -67,13 +70,24 @@ $(document).ready(function() {
                         <div class="col-sm-12">■このサイトについて</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">利用規約</div>
+                        <div class="col-sm-12">
+                        このサイトでは性癖の一致からの出会いの場を提供します。
+                        特にクンニをされたい者としたい者による一致に特化しています。
+                        性的行為についてはお互いの同意の基で行ってください。
+
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">利用規約</div>
+                        <div id="menu_ls_search" class="col-sm-12">掲示板を検索する</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">利用規約</div>
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-8 iframe_div">
+                        <iframe src="terms.html" width="100%" height="100">
+                        この部分はインラインフレームを使用してます。
+                        </iframe>
+                    </div>
+                    <div class="col-sm-2"></div>
                     </div>
                     <div class="row">
                         <div id="menu_ls_inquiry" class="col-sm-12">問合せ</div>
