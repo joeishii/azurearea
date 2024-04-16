@@ -78,7 +78,7 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <div class="row">
-                        <div id="menu_ls_search" class="col-sm-12">掲示板を検索する</div>
+                        <div id="menu_ls_search" class="col-sm-12">●掲示板を検索する</div>
                     </div>
                     <div class="row">
                     <div class="col-sm-2"></div>
@@ -90,7 +90,7 @@ $(document).ready(function() {
                     <div class="col-sm-2"></div>
                     </div>
                     <div class="row">
-                        <div id="menu_ls_inquiry" class="col-sm-12">問合せ</div>
+                        <div id="menu_ls_inquiry" class="col-sm-12">●問合せ</div>
                     </div>
                 </div>
 

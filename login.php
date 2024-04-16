@@ -49,7 +49,7 @@ $(document).ready(function() {
                         <div class="col-sm-12">■Confirmation</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">クンニを通じて素敵な出会いを募集するための掲示板です。年齢、利用規約を確認してご利用ください。</div>
+                        <div class="col-sm-12">このサイトはクンニを通じて素敵な出会いを募集するための掲示板です。年齢、利用規約を確認してご利用ください。</div>
                     </div>
 
                     <div class="row">
@@ -77,7 +77,7 @@ $(document).ready(function() {
                         <div class="d-grid gap-2 col-6 mx-auto">
                             
                             <button type="button" id="btn_entry" class="btn btn-warning"><b>Entry</b>
-                                <p>私は18歳以上で利用規約に承諾します</p>
+                                <p>私は18歳以上で利用規約を承諾します</p>
                             </button>
                             
                         </div>
