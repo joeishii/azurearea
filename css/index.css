@@ -9,6 +9,9 @@ body{
 	background-color: #38b48b;
 }
 
+#mainimage{
+		background-image: url("image/mainimage.png");
+}
 .iframe_div{
 	border: 1px black solid;	
 }
