@@ -46,7 +46,7 @@ $(document).ready(function() {
 	<div class="wrapper">Entrance</div>
             <div class="container">
                     <div class="row">
-                        <div class="col-sm-12">■Confirmation</div>
+                        <div class="col-sm-12"><h1>舐め犬マッチングサイト</h1></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12"><img src="image/mainimage.png" alt="image" title="image" width="100%"></div>
