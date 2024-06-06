@@ -67,6 +67,11 @@ $(document).ready(function() {
             <div class="container">
                     <hr>
                     <div class="row">
+                        <div class="col-sm-12"><img src="image/mainimage.png" alt="image" title="image"></div>
+                    </div>
+
+                    
+                    <div class="row">
                         <div class="col-sm-12">■このサイトについて</div>
                     </div>
                     <div class="row">
