@@ -49,7 +49,7 @@ $(document).ready(function() {
                         <div class="col-sm-12">■Confirmation</div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12"><img src="image/mainimage.png" alt="image" title="image"></div>
+                        <div class="col-sm-12"><img src="image/mainimage.png" alt="image" title="image" width="100%"></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12">このサイトはクンニを通じて素敵な出会いを募集するための掲示板です。年齢、利用規約を確認してご利用ください。</div>

@@ -67,7 +67,7 @@ $(document).ready(function() {
             <div class="container">
                     <hr>
                     <div class="row">
-                        <div class="col-sm-12"><img src="image/mainimage.png" alt="image" title="image" width=100%></div>
+                        <div class="col-sm-12"><img src="image/mainimage.png" alt="image" title="image" width="100%"></div>
                     </div>
 
                     
