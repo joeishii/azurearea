@@ -79,7 +79,7 @@ $(document).ready(function() {
                     <div class="row">
                         <div class="d-grid gap-2 col-6 mx-auto">
                             
-                            <button type="button" id="btn_entry" class="btn btn-warning"><b>Entry</b>
+                            <button type="button" id="btn_entry" class="btn btn-warning"><h2><b>Entry</b></h2>
                                 <p>私は18歳以上です。<br>利用規約を承諾します</p>
                             </button>
                             
