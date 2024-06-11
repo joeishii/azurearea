@@ -10,7 +10,6 @@ body{
 }
 
 #mainimage{
-		background-image: url("image/mainimage2.png");
 		width: 100%;
 		height: 100%;
 }
@@ -34,11 +33,10 @@ body{
     margin-left:0;
 	padding-left: 2%;
 	color:snow;
-	background-color: #9bbbf7;
 	background-color:royalblue;
+	background-color:rgb(225, 65, 65);
 }
 #blackpanel{
-	background-color: #9bbbf7;
 	background-color: blue;	
 	opacity: 0.3;
 	width: 100%;
