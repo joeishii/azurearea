@@ -87,7 +87,7 @@ $(document).ready(function() {
                     </div>
                     <div class="row">
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            <button type="button" id="btn_search" class="btn btn-primary"><h2>掲示板を検索する</h2></button>
+                            <button type="button" id="btn_search" class="btn btn-primary"><h2>掲示板を検索</h2></button>
                         </div>
                     </div>
 
