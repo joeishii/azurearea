@@ -5,8 +5,8 @@ date_default_timezone_set('Asia/Tokyo');//タイムゾーンの設定
 ////セッション開始
 session_start();
 if(!isset($_SESSION["sessionid"])){
-    header("Location:login.php");
-	exit;
+    //header("Location:login.php");
+	//exit;
 }
 
 
