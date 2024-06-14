@@ -85,6 +85,12 @@ $(document).ready(function() {
                             
                         </div>
                     </div>
+                    <div class="col-sm-12 iframe_div">
+
+
+                        <iframe src="https://bn.dxlive.com/sp/typec/prototype.html?frameW=480&amp;frameH=100&amp;picSize=s&amp;cat=everyone&amp;order=popular&amp;viewerNum=1&amp;blink=1&amp;blinkNum=1&amp;pf_msg=0&amp;not_test=1&amp;not_en=1&amp;session_type=&amp;bgColor=ffffff&amp;linkTxtColor=ff3399&amp;linkTxtColor_hover=00CCFF&amp;linkTo=1&amp;affid=235598&amp;border=1&amp;borderColor=999999&amp;picBorder=1&amp;picBorderColor=cccccc&amp;showName=1&amp;showHeaderTop=3&amp;showHeaderBtm=3&amp;showViewerCnt=1&amp;showViewerPos=1&amp;order_by=recom_free_vwr" height="480" width="100" border="0" scrolling="no" frameborder="0" style="overflow:hidden;width:480px;height:100px; margin:0 auto; border:0;" title="DXLiveオンラインバナー">iframe 対応のブラウザでない場合、<a href="https://bn.dxlive.com/sp/typec/prototype.html?frameW=480&amp;frameH=100&amp;picSize=s&amp;cat=everyone&amp;order=popular&amp;viewerNum=1&amp;blink=1&amp;blinkNum=1&amp;pf_msg=0&amp;not_test=1&amp;not_en=1&amp;session_type=&amp;bgColor=ffffff&amp;linkTxtColor=ff3399&amp;linkTxtColor_hover=00CCFF&amp;linkTo=1&amp;affid=235598&amp;border=1&amp;borderColor=999999&amp;picBorder=1&amp;picBorderColor=cccccc&amp;showName=1&amp;showHeaderTop=3&amp;showHeaderBtm=3&amp;showViewerCnt=1&amp;showViewerPos=1&amp;order_by=recom_free_vwr" target="_blank">こちらをクリック</a></iframe>
+
+                    </div>
                     <form id="form_login" action="index.php" method="post">
                             <input type="hidden" id="post_back" name="post_back" value="yes">
                     </form>
