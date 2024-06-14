@@ -85,7 +85,7 @@ $(document).ready(function() {
                             
                         </div>
                     </div>
-                    <form id="form_login" action="login.php" method="post">
+                    <form id="form_login" action="index.php" method="post">
                             <input type="hidden" id="post_back" name="post_back" value="yes">
                     </form>
             </div>

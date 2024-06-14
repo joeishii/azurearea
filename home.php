@@ -28,7 +28,7 @@ if(!isset($_SESSION["sessionid"])){
 <script>
 $(document).ready(function() {
     $('#btn_ls_home').click(function(){
-        window.location.href = "index.php"; //"../www/index.php"
+        window.location.href = "home.php"; //"../www/index.php"
     });
     $('#btn_ls_search').click(function(){
         window.location.href = "search.php";
