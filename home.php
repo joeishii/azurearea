@@ -107,8 +107,25 @@ $(document).ready(function() {
                             <button type="button" id="btn_inquiry" class="btn btn-secondary">お問合せ</button>
                         </div>
                     </div>
-                </div>
+            </div>
 
+            <hr>
+
+            <div class="row">
+                <div class="col-sm-12 text-center">
+
+
+                    <iframe src="https://bn.dxlive.com/sp/typec/prototype.html?frameW=480&amp;frameH=90&amp;picSize=l&amp;cat=everyone&amp;order=popular&amp;viewerNum=1&amp;blink=1&amp;blinkNum=1&amp;pf_msg=0&amp;not_test=1&amp;not_en=1&amp;session_type=&amp;bgColor=ffffff&amp;linkTxtColor=ff3399&amp;linkTxtColor_hover=00CCFF&amp;linkTo=1&amp;affid=235598&amp;border=1&amp;borderColor=999999&amp;picBorder=1&amp;picBorderColor=cccccc&amp;showName=1&amp;showHeaderTop=3&amp;showHeaderBtm=3&amp;showViewerCnt=1&amp;showViewerPos=1&amp;order_by=recom_free_vwr" height="auto" width="100%" border="0" scrolling="no" frameborder="0" style="overflow:hidden;width:100%;height:auto; margin:0 auto; border:0;" title="DXLiveオンラインバナー">iframe 対応のブラウザでない場合、<a href="https://bn.dxlive.com/sp/typec/prototype.html?frameW=480&amp;frameH=100&amp;picSize=l&amp;cat=everyone&amp;order=popular&amp;viewerNum=1&amp;blink=1&amp;blinkNum=1&amp;pf_msg=0&amp;not_test=1&amp;not_en=1&amp;session_type=&amp;bgColor=ffffff&amp;linkTxtColor=ff3399&amp;linkTxtColor_hover=00CCFF&amp;linkTo=1&amp;affid=235598&amp;border=1&amp;borderColor=999999&amp;picBorder=1&amp;picBorderColor=cccccc&amp;showName=1&amp;showHeaderTop=3&amp;showHeaderBtm=3&amp;showViewerCnt=1&amp;showViewerPos=1&amp;order_by=recom_free_vwr" target="_blank">こちらをクリック</a></iframe>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                <a href="https://click.dtiserv2.com/Click2/1352001-352-235598" target="_blank" rel="noopener"><img src="https://affiliate.dtiserv.com/image/heydouga/1352001.jpg" border="0" width="100%"></a>
+                
+                <a href="https://click.dtiserv2.com/Click/1132001-132-235598" target="_blank" rel="noopener"><img src="https://affiliate.dtiserv.com/image/kanjyuku/132-700-04.jpg" border="0" width="100%"></a>
+                <a href="https://click.dtiserv2.com/Click/2173002-173-235598" target="_blank" rel="noopener"><img src="https://affiliate.dtiserv.com/image/ccg/173-200-01.gif" border="0"></a>
+                </div>
+            </div>
             <hr>
                 <div class="row">
                     <div class="col-sm-12"><div id="copylight"></dvi></div>

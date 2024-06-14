@@ -102,8 +102,9 @@ $(document).ready(function() {
             <div class="row">
                 <div class="col-sm-12 text-center">
                 <a href="https://click.dtiserv2.com/Click2/1352001-352-235598" target="_blank" rel="noopener"><img src="https://affiliate.dtiserv.com/image/heydouga/1352001.jpg" border="0" width="100%"></a>
-                <a href="https://click.dtiserv2.com/Click/2173002-173-235598" target="_blank" rel="noopener"><img src="https://affiliate.dtiserv.com/image/ccg/173-200-01.gif" border="0"></a>
+                
                 <a href="https://click.dtiserv2.com/Click/1132001-132-235598" target="_blank" rel="noopener"><img src="https://affiliate.dtiserv.com/image/kanjyuku/132-700-04.jpg" border="0" width="100%"></a>
+                <a href="https://click.dtiserv2.com/Click/2173002-173-235598" target="_blank" rel="noopener"><img src="https://affiliate.dtiserv.com/image/ccg/173-200-01.gif" border="0"></a>
                 </div>
             </div>
             <hr>
