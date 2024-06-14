@@ -4,15 +4,11 @@ date_default_timezone_set('Asia/Tokyo');//タイムゾーンの設定
 
 ////セッション開始
 session_start();
-
-if($_POST['post_back']=="yes"){
-    $sessionid = session_id();
-    $_SESSION["sessionid"] = $sessionid;
+if(!isset($_SESSION["sessionid"])){
     header("Location:index.php");
-    exit();
-}else{
-    session_destroy();
+	exit;
 }
+
 
 ?>
 <!doctype html>
@@ -22,9 +18,7 @@ if($_POST['post_back']=="yes"){
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Entrance Page</title>
-<meta name="description" content="クンニを通じて素敵な出会いを募集するための掲示板">
-<meta name="keywords" content="クンニ,舐め犬,奉仕,募集,舐め犬掲示板,クンニ掲示板">
+<title>Index Page</title>
 <script src='//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
 <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js'></script>
 <link rel="stylesheet" href="css/index.css">
@@ -33,8 +27,22 @@ if($_POST['post_back']=="yes"){
 </head>
 <script>
 $(document).ready(function() {
-    $('#btn_entry').click(function(){
-        $('#form_login').submit();
+    $('#btn_ls_home').click(function(){
+        window.location.href = "index.php"; //"../www/index.php"
+    });
+    $('#btn_ls_search').click(function(){
+        window.location.href = "search.php";
+    });
+    $('#btn_ls_entry').click(function(){
+        window.location.href = "entry.php";
+    });
+
+    $('#btn_search').click(function(){
+        window.location.href = "search.php";
+    });
+
+    $('#btn_inquiry').click(function(){
+        window.location.href = "inquiry.php";
     });
 
     let d = new Date();
@@ -43,25 +51,47 @@ $(document).ready(function() {
 });
 </script>
 <body>
-	<div class="wrapper">Entrance</div>
+	<div class="wrapper">Home</div>
             <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class='mt-1'>
+                            <button type="button" id="btn_ls_home" class="btn btn-outline-dark btn-sm" disabled>Home</button>
+                            <button type="button" id="btn_ls_search" class="btn btn-outline-dark btn-sm">Search</button>
+                            <button type="button" id="btn_ls_entry" class="btn btn-outline-dark btn-sm">New Entry</button>
+                        </div>
+		            </div>
+                </div>
+            </div>
+
+            <div class="container">
+                    <hr>
                     <div class="row">
                         <div class="col-sm-12"><h1>舐め犬マッチングサイト</h1></div>
                     </div>
                     <div class="row">
                         <div class="col-sm-12"><img src="image/mainimage.png" alt="image" title="image" width="100%"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12">このサイトはクンニを通じて素敵な出会いを募集するための掲示板です。年齢、利用規約を確認してご利用ください。</div>
-                    </div>
 
+                    
                     <div class="row">
-                        <div class="col-sm-12">・年齢、利用規約確認</div>
+                        <div class="col-sm-12">■このサイトについて</div>
                     </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                        このサイトでは性癖の一致からの出会いの場を提供します。
+                        特にクンニをされたい者としたい者による一致に特化しています。
+                        性的行為についてはお互いの同意の基で行ってください。
 
-                    <div class="row">
-                        <div class="col-sm-12">・利用規約</div>
+                        </div>
                     </div>
+                    <div class="row">
+                        <div class="d-grid gap-2 col-6 mx-auto">
+                            <button type="button" id="btn_search" class="btn btn-danger"><b>掲示板を検索</b></button>
+                        </div>
+                    </div>
+                    <hr>
+
                     <div class="row">
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8 iframe_div">
@@ -71,30 +101,18 @@ $(document).ready(function() {
                     </div>
                     <div class="col-sm-2"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-sm-12 mt-1 text-center">
-                        利用規約を確認してください
-                        </div>
-                    </div>
+
                     <div class="row">
                         <div class="d-grid gap-2 col-6 mx-auto">
-                            
-                            <button type="button" id="btn_entry" class="btn btn-warning"><h2><b>Entry</b></h2>
-                                <p>私は18歳以上です。<br>利用規約を承諾します</p>
-                            </button>
-                            
+                            <button type="button" id="btn_inquiry" class="btn btn-secondary">お問合せ</button>
                         </div>
                     </div>
-                    <form id="form_login" action="login.php" method="post">
-                            <input type="hidden" id="post_back" name="post_back" value="yes">
-                    </form>
-            </div>
+                </div>
 
             <hr>
-
-            <div class="row">
-                <div class="col-sm-12"><div id="copylight"></dvi></div>
-            </div>            
+                <div class="row">
+                    <div class="col-sm-12"><div id="copylight"></dvi></div>
+                </div>            
 	</div>
 </body>
 </html>
