@@ -73,7 +73,7 @@ $(document).ready(function() {
                     </div>
                     <div class="row">
                         <div class="col-sm-12 mt-1 text-center">
-                        利用規約を確認してください
+                        利用規約を確認してください。
                         </div>
                     </div>
                     <div class="row">
