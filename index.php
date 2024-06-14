@@ -8,7 +8,7 @@ session_start();
 if($_POST['post_back']=="yes"){
     $sessionid = session_id();
     $_SESSION["sessionid"] = $sessionid;
-    header("Location:index.php");
+    header("Location:home.php");
     exit();
 }else{
     session_destroy();
