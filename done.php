@@ -45,7 +45,7 @@ $(document).ready(function() {
 
     //基本act
 	$('#btn_ls_home').click(function(){
-        window.location.href = "index.php";
+        window.location.href = "home.php";
     });
     $('#btn_ls_search').click(function(){
         window.location.href = "search.php";
