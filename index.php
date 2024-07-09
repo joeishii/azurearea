@@ -24,7 +24,7 @@ if($_POST['post_back']=="yes"){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Entrance Page</title>
 <meta name="description" content="クンニを通じて素敵な出会いを募集するための掲示板">
-<meta name="keywords" content="クンニ,舐め犬,奉仕,募集,舐め犬掲示板,クンニ掲示板">
+<meta name="keywords" content="クンニ,舐め犬,舐め犬マッチング、ナメマチ、奉仕,募集,舐め犬掲示板,クンニ掲示板">
 <script src='//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js'></script>
 <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js'></script>
 <link rel="stylesheet" href="css/index.css">
