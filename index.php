@@ -42,6 +42,7 @@ $(document).ready(function() {
     $("#copylight").html("Copylight " + y + " YAY ℠");
 });
 </script>
+<meta name="google-site-verification" content="qGiJ2hLINt-G8jFcZSry07lwCJPQGnFvG919lBmrLFU" />
 <body>
 	<div class="wrapper">Entrance</div>
             <div class="container">
